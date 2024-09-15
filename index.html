@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="ko">
     <head>
-        <title>Around Vocal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/general.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_header.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_body.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <title>
+            어라운드 보컬
+        </title>
     </head>
-    <body>
-        <h1>This is page for Around Vocal</h1>
-        <h2>The page will be open soon...</h2>
+
+    <body style="height: 1000px; background-color: rgb(219, 254, 226);">
+        <div class="header">
+            <div class="header-flex">
+                <div class="header-flex-item-left">
+                    <img class="main-logo" src="./images/logos/main_logo.png">
+                </div>
+
+                <nav class="header-flex-item-middle">
+                    <a href="./index.html" class="middle-text">어라운드보컬 소개</a>
+                    <a href="./index.html" class="middle-text">대표원장 인사말</a>
+                    <a href="./index.html" class="middle-text">지점소개</a>
+                    <a href="./index.html" class="middle-text">강사소개</a>
+                    <a href="./index.html" class="middle-text">상담신청</a>
+                    <a href="./index.html" class="middle-text">강사지원</a>
+                </nav>
+
+                <div class="header-flex-item-middle-mobile">
+                    <a href="./index.html" class="middle-text middle-text-mobile">Around Vocal</a>
+                </div>
+
+                <div class="header-flex-item-right">
+                    <a href="./index.html" class="middle-text">강의 바로가기</a>
+                </div>
+
+
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav id="mobileMenu" class="mobile-menu">
+                    <a href="#intro" class="mobile-menu-item">어라운드보컬 소개</a>
+                    <a href="#CEO" class="mobile-menu-item">대표원장 인사말</a>
+                    <a href="#branches" class="mobile-menu-item">지점소개</a>
+                    <a href="#lecturer" class="mobile-menu-item">강사소개</a>
+                    <a href="#meeting" class="mobile-menu-item">상담신청</a>
+                    <a href="#apply" class="mobile-menu-item">강사지원</a>
+                    <a href="#lecture" class="mobile-menu-item">강의 바로가기</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="content video-container">
+                <video muted playsinline autoplay loop>
+                    <source src="./videos/sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  
+
+            </div>
+
+            <div class="content intro" id="intro">
+                어라운드 보컬 소개
+            </div>
+
+            <div class="content CEO" id="CEO">
+                대표원장 이사말
+            </div>
+
+            <div class="content branches" id="branches">
+                지점 소개
+            </div>
+
+            <div class="content lecturer" id="lecturer">
+                강사소개
+            </div>
+
+            <div class="content meeting" id="meeting">
+                상담신청
+            </div>
+
+        </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById('hamburgerMenu').addEventListener('click', function() {
+            toggleMenu();
+        })
+
+        function toggleMenu() {
+            const x = document.getElementById('mobileMenu');
+            if (x.style.display === 'flex') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'flex';
+            }
+        }
+
+
+
+    </script>
+
+
     </body>
+
+
+
+
+
+
 </html>

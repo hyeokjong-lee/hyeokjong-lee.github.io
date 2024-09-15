@@ -1,0 +1,11 @@
+
+
+* {
+    font-family: "Noto Sans KR";
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  
