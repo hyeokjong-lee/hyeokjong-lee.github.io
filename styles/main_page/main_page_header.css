@@ -3,24 +3,37 @@
 .header-flex{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    position: fixed;
-    background-color: rgb(17, 23, 31);
+    background-color: rgb(23, 31, 41);
     
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     height: 70px;
 
+    z-index: 100;
+
+    font-size: 14px;
 }
 
+
 .header-flex-item-left {
-    background-color: white;
+    margin-left: 12px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.header-flex-item-left:hover {
+    border: white 1px solid;
+}
+.header-flex-item-left:active {
+    background-color: white;
 }
 .main-logo {
-    height: 70%;
+    width: 100px;
 }
 
 .header-flex-item-middle,
@@ -39,16 +52,35 @@
     text-decoration: none;
     margin-right: 20px;
     flex-shrink: 0;
+    transition-property: color, font-size, text-decoration, font-weight;
+    transition-duration: 0.15s;
 }
+.middle-text:hover {
+    color: rgb(164, 181, 255);
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+}
+.middle-text:active {
+    background-color: rgba(255, 255, 255, 0.193);
+    border-radius: 2px;
+    padding: 4px 10px;;
+}
+
+
+
 .middle-text-mobile {
     color: white;
     font-size: 30px;
     font-weight: 500;
 }
-.middle-text:hover {
-    color: rgb(164, 181, 255);
-}
 
+
+.video-container,
+.video-main {
+    z-index: 10;
+    position: relative;
+}
 
 .header-flex-item-right {
     display: flex;
@@ -57,6 +89,11 @@
     flex-shrink: 0;
 }
 
+
+
+
+
+
 .hamburger-menu {
     display: none;
     background: none;
@@ -64,11 +101,15 @@
     cursor: pointer;
     padding: 0;
     margin-right: 10px;
+    padding: 0px 10px;
+}
+.hamburger-menu:active {
+    opacity: 0.4;
 }
 
 .hamburger-menu .bar {
     display: none;
-    width: 40px;
+    width: 30px;
     height: 3px;
     background-color: white;
     margin: 10px 0;
@@ -113,4 +154,11 @@
     }
 }
 
+/* .header-flex-item-left {
+    min-width: 0;
+    max-width: 100%;
+}
 
+.header-flex-item-left {
+    flex: 0 1 auto; 
+} */

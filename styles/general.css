@@ -7,5 +7,12 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
-  }
+}
+
+body {
+    height: 3000px;
+    background-color: rgb(219, 254, 252);
+}
+
+
   
