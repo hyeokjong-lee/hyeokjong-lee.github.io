@@ -68,13 +68,12 @@
 }
 
 
-
 .middle-text-mobile {
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
+    text-decoration: none;
 }
-
 
 .video-container,
 .video-main {
@@ -88,11 +87,6 @@
     align-items: center;
     flex-shrink: 0;
 }
-
-
-
-
-
 
 .hamburger-menu {
     display: none;
@@ -115,7 +109,6 @@
     margin: 10px 0;
     transition: 0.3s;
 }
-
 
 .mobile-menu {
     display: none;
