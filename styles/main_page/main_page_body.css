@@ -13,9 +13,6 @@
     border: black solid 1px;
 }
 
-.lecturer {
-    height: 1000px;
-}
 
 .video-container {
     position: relative;
@@ -104,8 +101,8 @@
 }
 
 .lecturer-profile-image {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
 }
 
 .lecturer-name {
