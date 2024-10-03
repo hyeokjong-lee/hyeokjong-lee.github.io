@@ -14,13 +14,11 @@
 }
 .meeting-image {
     height: 500px;
-    width: 600px;
     border: solid 2px blue;
     margin: 10px;
 }
 .meeting-contents {
     height: 500px;
-    width: 600px;
     border: solid 2px green;
     display: flex;
     flex-direction: column;
@@ -32,7 +30,6 @@
 }
 .meeting-buttons {
     height: 500px;
-    width: 600px;
     border: solid 2px pink;
 
     display: flex;
@@ -44,7 +41,6 @@
 .meeting-buttons button {
     border: solid yellow 2px;
     height: 50px;
-    width: 400px;
     font-size: 20px;
     margin: 10px;
 }
