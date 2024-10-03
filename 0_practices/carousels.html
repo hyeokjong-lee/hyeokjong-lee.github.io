@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Image Carousel</title>
+        <style>
+            * {
+                box-sizing: border-box; /* box size border까지 합쳐서 더 편하게 해줌 */
+                margin: 0;
+                padding: 0;
+            }
+            .carousel {
+                position: relative;
+                width: 100%;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                border-radius: 80px 0 10px 0;
+            }
+            .carousel-images {
+                display: flex;
+                transition-property: transform;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+            }
+            .carousel-images img {
+                width: 100%;
+            }
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border-width: 0;
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+            .prev {
+                left: 10px;
+            }
+            .next {
+                right: 10px;
+            }
+            .carousel-indicators {
+                display: flex;
+                justify-content: center;
+            }
+            .carousel-indicators div {
+                height: 10px;
+                width: 30px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                background-color: #bbb;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .carousel-indicators .current {
+                background-color: rgb(170, 0, 0);
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://via.placeholder.com/600x400/FF5733/FFFFFF" alt="Slide 1">
+            <img src="https://via.placeholder.com/600x400/33FF57/FFFFFF" alt="Slide 2">
+            <img src="https://via.placeholder.com/600x400/3357FF/FFFFFF" alt="Slide 3">
+            <img src="https://via.placeholder.com/600x400/FF57FF/FFFFFF" alt="Slide 3">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <div class="carousel-indicators">
+        <div class="current" data-index="0"></div>
+        <div data-index="1"></div>
+        <div data-index="2"></div>
+        <div data-index="3"></div>
+    </div>
+
+    <script>
+        var images = document.querySelector('.carousel-images');
+        var indicators = document.querySelectorAll('.carousel-indicators div');
+        var currentIndex = 0;
+
+        function updateCarousel(index) {
+            images.style.transform = 'translateX(-' + (index * 100) + '%)';
+            indicators.forEach(function(ind) {
+                ind.classList.remove('current');
+            });
+            indicators[index].classList.add('current');
+        }
+
+        document.querySelector('.next').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % indicators.length;
+            updateCarousel(currentIndex);
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + indicators.length) % indicators.length;
+            updateCarousel(currentIndex);
+        });
+
+        /*
+        indicators.forEach(function(indicator) {
+            indicator.addEventListener('click', function() {
+                currentIndex = parseInt(indicator.getAttribute('data-index'));
+                updateCarousel(currentIndex);
+            });
+        });
+        */
+
+        for (var i = 0; i < indicators.length; i++) {
+            indicators[i].addEventListener('click', function() {
+                currentIndex = parseInt(this.getAttribute('data-index'));
+                updateCarousel(currentIndex); // 아래 동그란 버튼 눌렀을때도 이동하게 하는 기능임.
+            });
+        }
+        
+    </script>
+
+    </body>
+</html>

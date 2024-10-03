@@ -1,0 +1,16 @@
+.navermap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px #ff0000 solid;
+
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+    border: grey solid 6px;
+    margin: 10px;
+    border-radius: 10px;
+}

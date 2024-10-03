@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <style>
+
+            .arrow {
+                font-size: 60px;
+                padding: 0 20px;
+                display: flex;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, 0.3);
+                border: 2px rgb(0, 0, 0, 0) solid;
+                margin: 2px;
+                cursor: pointer;
+            }
+            .arrow:active {
+                background-color: rgba(255, 255, 255, 0.5);
+                border: 2px red solid;
+            }
+            .items {
+                width: 600px;
+                min-width: 600px;
+                height: 400px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                color: white;
+                font-family: Arial;
+            }
+
+            .item1 {
+                background-color: rgb(61, 5, 5);
+            }
+            .item2 {
+                background-color: rgb(18, 45, 120);
+            }
+            .item3 {
+                background-color: rgb(26, 151, 93);
+            }
+            .item4 {
+                background-color: rgb(152, 161, 27);
+            }
+            .item5 {
+                background-color: rgb(188, 25, 139);
+            }
+
+
+            .items-container {
+                display: flex;
+                transform: translateX(0%);
+                transition-property: transform;
+                transition-duration: 0.8s;
+                transition-timing-function: ease-in-out;
+            }
+
+            .carousel {
+                width: 600px;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .prev {
+                left: 0;
+            }
+            .next {
+                right: 0;
+            }
+
+            .carousel-indicators {
+                display: flex;
+                justify-content: center;
+            }
+            .carousel-indicators div {
+                height: 20px;
+                width: 40px;
+                background-color: rgb(0, 0, 0, 0.8);
+                margin: 10px 20px;
+                cursor: pointer;
+                border-radius: 20px ;
+            }
+
+            .carousel-indicators .current {
+                background-color: rgb(0, 98, 255);
+                width: 80px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="carousel">
+            <div class="items-container">
+                <div class="items item1">Item 1</div>
+                <div class="items item2">Item 2</div>
+                <div class="items item3">Item 3</div>
+                <div class="items item4">Item 4</div>
+                <div class="items item5">Item 5</div>
+            </div>
+            <button class="arrow prev">&#10094;</button>
+            <button class="arrow next">&#10095;</button>
+
+            <div class="carousel-indicators">
+            </div>
+        </div>
+
+
+
+        <script>
+            const itemContainer = document.querySelector(".items-container");
+            const numberOfItems = document.querySelectorAll(".items").length;
+            const prevButton = document.querySelector(".prev");
+            const nextButton = document.querySelector(".next");
+            const indicator = document.querySelector(".carousel-indicators");
+
+
+            let indicatorContent = '';
+            for (let i = 1; i <= numberOfItems; i++) {
+                if (i === 1) {
+                    indicatorContent += `<div class="current" data-index="${i}"></div>`;
+                } else {
+                    indicatorContent += `<div data-index="${i}"></div>`;
+                }
+            }
+            indicator.innerHTML = indicatorContent;
+
+            const indicatorDivs = document.querySelectorAll(".carousel-indicators div");
+
+
+            // data-index 만드는 코드
+
+            let currentIndex = 0;
+
+            prevButton.addEventListener('click', function () {
+                currentIndex -= 1;
+                currentIndex += numberOfItems;
+                currentIndex %= numberOfItems;
+                updateCarousel(currentIndex);
+            })
+            nextButton.addEventListener('click', function () {
+                currentIndex += 1;
+                currentIndex %= numberOfItems;
+                updateCarousel(currentIndex);
+            })
+
+            function updateCarousel(index) {
+                itemContainer.style.transform = `translateX(-${index*100}%)`;
+                indicatorDivs.forEach(function (INDEX) {
+                    INDEX.classList.remove('current');
+                });
+                indicatorDivs[index].classList.add('current')
+            }
+
+            indicatorDivs.forEach(function(indicator) {
+                indicator.addEventListener('click', function() {
+                    currentIndex = parseInt(indicator.getAttribute('data-index'));
+                    updateCarousel(currentIndex - 1);
+                })
+            })
+
+        </script>
+    </body>
+</html>

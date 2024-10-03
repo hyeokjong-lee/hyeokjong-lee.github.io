@@ -1,0 +1,50 @@
+.meeting {
+    height: 600px;
+    border: solid 2px red;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.meeting-image-container {
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meeting-image {
+    height: 500px;
+    width: 600px;
+    border: solid 2px blue;
+    margin: 10px;
+}
+.meeting-contents {
+    height: 500px;
+    width: 600px;
+    border: solid 2px green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.meeting-items {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.meeting-buttons {
+    height: 500px;
+    width: 600px;
+    border: solid 2px pink;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.meeting-buttons button {
+    border: solid yellow 2px;
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+    margin: 10px;
+}

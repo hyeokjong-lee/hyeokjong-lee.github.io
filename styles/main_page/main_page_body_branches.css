@@ -1,0 +1,103 @@
+.branches-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.branches {
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    border: red 5px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.branches-carousel {
+    padding: 50px 0 50px 0;
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+    border: rgb(81, 0, 255) 5px solid;
+}
+
+.branch-container {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.branch-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.branch-information div {
+    margin: 8px;
+}
+
+.branch-image {
+    width: 40%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rgb(55, 255, 0) 5px solid;
+}
+
+.carousel-indicators div {
+    background-color: rgba(119, 161, 165, 0.7);
+    border-radius: 20px;
+    width: 50px;
+    height: 10px;
+    margin: 20px 10px;
+}
+
+.carousel-indicators .current {
+    background-color: rgba(15, 19, 61, 0.7);
+    width: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .branch-container {
+        flex-direction: column;
+    }
+    .branch-image,
+    .branch-information {
+        width: 90%;
+    }
+    .branch-image {
+        order: 0;
+    }
+    .branch-information {
+        order: 1;
+    }
+}

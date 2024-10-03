@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/general.css">
         <link rel="stylesheet" href="./styles/main_page/main_page_header.css">
-        <link rel="stylesheet" href="./styles/main_page/main_page_body.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_body_intro.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_body_video.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_body_lecturer.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_body_branches.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_naver_map.css">
+        <link rel="stylesheet" href="./styles/main_page/main_page_meeting.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
@@ -26,6 +31,7 @@
                     <a href="#intro" class="middle-text">어라운드보컬 소개</a>
                     <a href="#branches" class="middle-text">지점소개</a>
                     <a href="#lecturer" class="middle-text">강사소개</a>
+                    <a href="#news" class="middle-text">뉴스룸</a>
                     <a href="#meeting" class="middle-text">상담신청</a>
                     <a href="#apply" class="middle-text">강사지원</a>
                 </nav>
@@ -48,6 +54,7 @@
                     <a href="#intro" class="mobile-menu-item">어라운드보컬 소개</a>
                     <a href="#branches" class="mobile-menu-item">지점소개</a>
                     <a href="#lecturer" class="mobile-menu-item">강사소개</a>
+                    <a href="#news" class="middle-text">뉴스룸</a>
                     <a href="#meeting" class="mobile-menu-item">상담신청</a>
                     <a href="#apply" class="mobile-menu-item">강사지원</a>
                     <a href="#lecture" class="mobile-menu-item">강의 바로가기</a>
@@ -63,16 +70,201 @@
                   </video>
             </div>
 
-            <div class="content intro-container" id="intro">
-                어라운드 보컬 소개
+            <div class="content intro" id="intro">
+                <div class="intro-container">
+
+                    <div class="intro-context">
+                        <div class="intro-hello1">
+                            안녕하세요 어라운드보컬입니다.
+                        </div>
+                        <div class="intro-hello2">
+                            노래하면서 행복해지고 싶은분들을 기다립니다.
+                        </div>
+                        <div class="intro-hello3">
+                            &#10004; 노래할때 행복을 느끼는 분들.
+                        </div>
+                        <div class="intro-hello3">
+                            &#10004; 노래를 체계적으로 배우고 싶은 분들.
+                        </div>
+                            
+                        
+
+                        <div class="intro-qna">
+                            어라운드보컬의 수업은 다음을 보장합니다.
+                            <div class="intro-qna-abstract">
+                                1. 체계적인 수업 커리큘럼
+                            </div>
+                            <div class="intro-qna-explain">
+                                대표원장의 다년간의 경험과 전문성을 바탕으로 짜여진 수업 커리큘럼을 기반으로 수업이 진행됩니다.
+                            </div>
+                        </div>
+
+                        <div class="intro-qna">
+                            <div class="intro-qna-abstract">
+                                2. 철저한 강사관리 시스템
+                            </div>
+                            <div class="intro-qna-explain">
+                                다년간의 학원 운영 경험상 최상의 수업을 보장하기 위해 철저한 강사관리가 핵심임을 깨닫고, 철저한 강사관리 시스템을 구축하였습니다.
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                    <div class="intro-ceo-image-grid">
+                        <img class="intro-ceo-image" src="./images/main/ceo.png">
+                        <img class="intro-ceo-logo" src="./images/logos/main_logo.png">
+                    </div>
+
+
+
+                </div>
             </div>
 
-            <div class="content branches" id="branches">
-                지점 소개
+            <div class="branches-flex" id="branches">
+
+                <div class="branches">
+                    
+                    <div class="branches-carousel" id="branchesCarousel">
+                        <div class="branch-container">
+                            <div class="branch-information">
+                                <div class="branch-name">
+                                    지점명 : 구리 본점
+                                </div>
+                                <div class="branch-location">
+                                    주소 : 경기 구리시 토평동 965 우신빌딩 5층 어라운드보컬
+                                    <a class="branch-map" href="https://naver.me/GJTar4gA">
+                                        <button>네이버맵 바로가기</button>
+                                    </a>
+                                </div>
+                                <div class="branch-tel">
+                                    전화번호 : 031-000-0000
+                                    <a href="tel:+821081916182">
+                                        <button>전화하기</button>
+                                    </a>
+                                </div>
+                                <div class="branch-manager">
+                                    센터장 : 안시윤 대표원장
+                                </div>
+                                <div class="branch-stats">
+                                    <p>트레이너 : 8명</p>
+                                    <p>수강생 : 50명</p>
+                                </div>
+                                
+                            </div>
+                            <img class="branch-image" src="./images/branches/branch1.png">
+
+                            <div class="navermap-container">
+                                <section class="section" id="section-3">
+                                    <div id="map"></div>
+                                    <code id="snippet" class="snippet"></code>
+                                </section>
+                            </div>
+                        </div>
+                
+                        <div class="branch-container">
+                            <div class="branch-information">
+                                <div class="branch-name">
+                                    지점명 : 하남 분점 1
+                                </div>
+                                <div class="branch-location">
+                                    주소 : 경기 하남시
+                                    <button class="branch-map">
+                                        네이버맵 바로가기
+                                    </button>
+                                </div>
+                                <div class="branch-tel">
+                                    031-000-0000
+                                    <button class="branch-call">
+                                        전화하기
+                                    </button>
+                                </div>
+                                <div class="branch-manager">
+                                    센터장 : 안시윤 대표원장
+                                </div>
+                                <div class="branch-stats">
+                                    <p>트레이너 : 8명</p>
+                                    <p>수강생 : 50명</p>
+                                </div>
+                                
+                            </div>
+                            <img class="branch-image" src="./images/branches/branch2.png">
+                        </div>
+                
+                        <div class="branch-container">
+                            <div class="branch-information">
+                                <div class="branch-name">
+                                    지점명 : 하남 분점 2
+                                </div>
+                                <div class="branch-location">
+                                    주소 : 경기 하남시
+                                    <button class="branch-map">
+                                        네이버맵 바로가기
+                                    </button>
+                                </div>
+                                <div class="branch-tel">
+                                    031-000-0000
+                                    <button class="branch-call">
+                                        전화하기
+                                    </button>
+                                </div>
+                                <div class="branch-manager">
+                                    센터장 : 안시윤 대표원장
+                                </div>
+                                <div class="branch-stats">
+                                    <p>트레이너 : 8명</p>
+                                    <p>수강생 : 50명</p>
+                                </div>
+                                
+                            </div>
+                            <img class="branch-image" src="./images/branches/branch3.png">
+                        </div>
+
+                        <div class="branch-container">
+                            <div class="branch-information">
+                                <div class="branch-name">
+                                    지점명 : 하남 분점 3
+                                </div>
+                                <div class="branch-location">
+                                    주소 : 경기 하남시
+                                    <button class="branch-map">
+                                        네이버맵 바로가기
+                                    </button>
+                                </div>
+                                <div class="branch-tel">
+                                    031-000-0000
+                                    <button class="branch-call">
+                                        전화하기
+                                    </button>
+                                </div>
+                                <div class="branch-manager">
+                                    센터장 : 안시윤 대표원장
+                                </div>
+                                <div class="branch-stats">
+                                    <p>트레이너 : 8명</p>
+                                    <p>수강생 : 50명</p>
+                                </div>
+                                
+                            </div>
+                            <img class="branch-image" src="./images/branches/branch3.png">
+                        </div>
+
+                    </div>
+                    <div class="arrow left" id="arrowLeft">&#10094;</div>
+                    <div class="arrow right" id="arrowRight">&#10095;</div>
+
+                    <div class="carousel-indicators">
+                    </div>
+
+                </div>
             </div>
+            
 
             <div class="lecturer" id="lecturer">
-                강사소개
 
 
                 <div class="lecturer-container">
@@ -137,39 +329,48 @@
 
             </div>
 
-            <div class="content meeting" id="meeting">
-                상담신청
+            <div class="content news" id="news">
+                뉴스룸
             </div>
+
+            <div class="meeting" id="meeting">
+                <div class="meeting-image-container">
+                    <img class="meeting-image">
+                </div>
+                <div class="meeting-contents">
+                    <div class="meeting-items">전화 or 카카오톡으로 상담신청을 해주세요.</div>
+                    <div class="meeting-items">상담가능시간 : 09시 - 22시</div>
+                    <div class="meeting-items"></div>
+                </div>
+                <div class="meeting-buttons">
+                    <button class="meeting-kakaotalk">카카오톡 바로가기</button>
+                    <button class="meeting-forms">상담신청 페이지 바로가기</button>
+                </div>
+            </div>
+
+            <div class="content apply" id="apply">
+                강사지원
+            </div>
+
+
+              
+
+            
+              
 
         </div>
 
 
 
+        <script src="./functions/main_branches.js"></script>
+        <script src="./functions/header.js"></script>
 
-    <script>
-        document.getElementById('hamburgerMenu').addEventListener('click', function() {
-            toggleMenu();
-        })
-
-        function toggleMenu() {
-            const x = document.getElementById('mobileMenu');
-            if (x.style.display === 'flex') {
-                x.style.display = 'none';
-            } else {
-                x.style.display = 'flex';
-            }
-        }
-
-
-
-    </script>
-
-
+        
+        <!-- naver map -->
+        <script id="code"></script>
+        <script src="./functions/naver_map.js"></script>
+            
     </body>
-
-
-
-
 
 
 </html>

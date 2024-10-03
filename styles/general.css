@@ -12,7 +12,21 @@ html {
 body {
     height: 3000px;
     background-color: rgb(239, 248, 255);
+    margin: 0;
 }
 
 
   
+* {
+    color: black;
+}
+
+.main {
+    margin-top: 70px;
+}
+
+.content {
+    height: 1000px;
+    border: black solid 1px;
+}
+
