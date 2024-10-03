@@ -8,7 +8,6 @@
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     align-items: center;
-    border: rgb(0, 8, 255) 2px solid;
     /* mobile등은 그냥 빡세게 media coding하기 */
 }
 

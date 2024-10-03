@@ -1,21 +1,21 @@
 .meeting {
     height: 600px;
     border: solid 2px red;
-
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .meeting{
+        flex-direction: column;
+    }
 }
 .meeting-image-container {
     border: 5px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.meeting-image {
-    height: 500px;
-    border: solid 2px blue;
-    margin: 10px;
 }
 .meeting-contents {
     height: 500px;
@@ -39,8 +39,17 @@
 }
 
 .meeting-buttons button {
-    border: solid yellow 2px;
     height: 50px;
+    width: 300px;
     font-size: 20px;
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.kakao-icon {
+    height: 30px;
+    margin-right: 10px;
 }

@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="./styles/main_page/main_page_body_video.css">
         <link rel="stylesheet" href="./styles/main_page/main_page_body_lecturer.css">
         <link rel="stylesheet" href="./styles/main_page/main_page_body_branches.css">
-        <link rel="stylesheet" href="./styles/main_page/main_page_naver_map.css">
         <link rel="stylesheet" href="./styles/main_page/main_page_meeting.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,6 +70,7 @@
             </div>
 
             <div class="content intro" id="intro">
+                <div class="content-title">어라운드보컬 소개</div>
                 <div class="intro-container">
 
                     <div class="intro-context">
@@ -125,8 +125,10 @@
                 </div>
             </div>
 
-            <div class="branches-flex" id="branches">
 
+            <div class="split-line"></div>
+            <div class="content-title">지점소개</div>
+            <div class="branches-flex" id="branches">
                 <div class="branches">
                     
                     <div class="branches-carousel" id="branchesCarousel">
@@ -156,13 +158,15 @@
                                 </div>
                                 
                             </div>
-                            <img class="branch-image" src="./images/branches/branch1.png">
+                            <div class="branch-image-map">
+                                <img class="branch-image" src="./images/branches/branch1.png">
 
-                            <div class="navermap-container">
-                                <section class="section" id="section-3">
-                                    <div id="map"></div>
-                                    <code id="snippet" class="snippet"></code>
-                                </section>
+                                <div class="navermap-container">
+                                    <section class="section" id="section-3">
+                                        <div id="map"></div>
+                                        <code id="snippet" class="snippet"></code>
+                                    </section>
+                                </div>
                             </div>
                         </div>
                 
@@ -263,7 +267,8 @@
                 </div>
             </div>
             
-
+            <div class="split-line"></div>
+            <div class="content-title">강사소개</div>
             <div class="lecturer" id="lecturer">
 
 
@@ -328,30 +333,39 @@
 
 
             </div>
+            <div class="split-line"></div>
+            <div class="content-title">뉴스룸</div>
+            <div class="content news" id="news"></div>
 
-            <div class="content news" id="news">
-                뉴스룸
-            </div>
-
+            <div class="split-line"></div>
+            <div class="content-title">상담신청</div>
             <div class="meeting" id="meeting">
-                <div class="meeting-image-container">
-                    <img class="meeting-image">
-                </div>
                 <div class="meeting-contents">
                     <div class="meeting-items">전화 or 카카오톡으로 상담신청을 해주세요.</div>
-                    <div class="meeting-items">상담가능시간 : 09시 - 22시</div>
+                    <div class="meeting-items">상담가능시간 : 13시 - 22시</div>
+                    <div class="meeting-items">상담가능지점(장소) : 구리본점, 하남분점</div>
                     <div class="meeting-items"></div>
                 </div>
                 <div class="meeting-buttons">
-                    <a href="http://pf.kakao.com/_QxbxcLxj">
-                        <button class="meeting-kakaotalk">카카오톡 바로가기</button>
+                    <a href="http://pf.kakao.com/_QxbxcLxj" style="text-decoration: none;">
+                        <button class="meeting-kakaotalk">
+                            <img src="./images/icons/kakaotalk.png" class="kakao-icon">
+                            카카오톡 바로가기
+                        </button>
                     </a>
-                    <button class="meeting-forms">상담신청 페이지 바로가기</button>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSebH55pifwKLQDoTrgMUvblXhfHjc17F0dUdWkaOcXGQZvVHg/viewform?usp=sf_link" style="text-decoration: none;">
+                        <button class="meeting-kakaotalk">
+                            <img src="./images/icons/google-form.png" class="kakao-icon">
+                            구글폼 바로가기
+                        </button>
+                    </a>
                 </div>
             </div>
 
+
+            <div class="split-line"></div>
+            <div class="content-title">강사지원</div>
             <div class="content apply" id="apply">
-                강사지원
             </div>
 
 

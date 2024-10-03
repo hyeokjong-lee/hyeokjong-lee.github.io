@@ -8,7 +8,6 @@
     width: 100%;
     position: relative;
     overflow: hidden; 
-    border: red 5px solid;
 
     display: flex;
     flex-direction: column;
@@ -20,7 +19,6 @@
     padding: 50px 0 50px 0;
     display: flex;
     transition: transform 0.5s ease-in-out; 
-    border: rgb(81, 0, 255) 5px solid;
 }
 
 .branch-container {
@@ -41,8 +39,31 @@
 }
 
 .branch-image {
-    width: 40%;
+    width: 500px;
+    height: 200px;
     object-fit: cover;
+}
+
+.navermap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#map {
+    height: 200px;
+    width: 500px;
+    border: rgb(0, 0, 0) solid 4px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.branch-image-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow {
@@ -69,7 +90,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: rgb(55, 255, 0) 5px solid;
 }
 
 .carousel-indicators div {
@@ -86,6 +106,10 @@
 }
 
 
+
+
+
+
 @media (max-width: 768px) {
     .branch-container {
         flex-direction: column;
@@ -100,4 +124,10 @@
     .branch-information {
         order: 1;
     }
+    .branch-image,
+    #map {
+        height: 150px;
+        width: 300px;
+    }
+
 }

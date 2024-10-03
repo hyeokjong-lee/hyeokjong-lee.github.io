@@ -19,34 +19,28 @@
 .intro-hello1 {
     margin-top: 50px;
     height: 80px;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
-
-
 }
 .intro-hello2 {
     height: 60px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
-
-
 }
+
 .intro-hello3 {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .intro-qna {
@@ -59,11 +53,11 @@
 }
 
 .intro-qna-abstract {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
 }
 .intro-qna-explain {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -85,12 +79,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    
-    border: rgb(41, 0, 128) 2px solid;
 }
 .intro-ceo-image {
-    height: 560px;
-    border: rgb(41, 0, 128) 2px solid;
+    height: 460px;
 }
 
 .intro-ceo-logo {
